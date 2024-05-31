@@ -10,6 +10,7 @@ public class MultiThreadClient {
 	
 	// 메인 함수 
 	public static void main(String[] args) {
+		new MultiThreadClient();
 		
 		System.out.println("### 클라이언트 실행 ### ");
 		try(Socket socket = new Socket("localhost", 5000)) {
@@ -33,7 +34,7 @@ public class MultiThreadClient {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
-		
+
 	} // end of main
 	
 	// 1. 클라이언트로부터 데이터를 읽는 스레드 시작 메서드 생성  
@@ -77,5 +78,6 @@ public class MultiThreadClient {
 			e.printStackTrace();
 		} 
 	}
+	
 	
 } // end of class 
